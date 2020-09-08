@@ -23,7 +23,7 @@ namespace CSharp.Assignments.Loop1
     /// </summary>
     public class CheckerboardPattern
     {
-        public static void Main(string[]args)
+        public static void Main()
         {
             Console.Write("Enter the number of rows: ");
             int num = int.Parse(Console.ReadLine());

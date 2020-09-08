@@ -38,14 +38,17 @@ namespace CSharp.Assignments.Loop1
           if(speed <=60 )
                 {
                 Console.WriteLine("No ticeket");
+                return 0;
             }
-          else if (speed >=61 && speed <= 80)
+          else if (speed <= 80)
                 {
                 Console.WriteLine("Small Ticket");
+                return 1;
                     }
-          else if (speed >=81)
+          else 
                 {
            Console.WriteLine("Big Ticket");
+                return 2;
             }
         }
 
