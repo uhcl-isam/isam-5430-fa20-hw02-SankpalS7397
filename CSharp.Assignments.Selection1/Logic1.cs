@@ -35,7 +35,18 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static int CaughtSpeeding(int speed, bool birthday)
         {
-            throw new NotImplementedException();
+          if(speed <=60 )
+                {
+                Console.WriteLine("No ticeket");
+            }
+          else if (speed >=61 && speed <= 80)
+                {
+                Console.WriteLine("Small Ticket");
+                    }
+          else if (speed >=81)
+                {
+           Console.WriteLine("Big Ticket");
+            }
         }
 
         /// <summary>
@@ -46,8 +57,13 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool Love6(int a, int b)
         {
-            throw new NotImplementedException();
-        }
+           if (a==6  || b==6 || a+b ==6 || a-b==6)
+                {return true;
+                }
+           else{
+            return false;
+                }
+                }
 
         /// <summary>
         /// Return true if the given non-negative number is 1 or 2 more than a multiple of 20.
@@ -56,7 +72,7 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool More20(int num)
         {
-            throw new NotImplementedException();
+  return (num%20) == 1 || (num%20)==2;
         }
 
         /// <summary>
@@ -66,7 +82,14 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool NearTen(int num)
         {
-            throw new NotImplementedException();
+             if (num%10 <= 2 || num%10 >= 8)
+            {
+        return true;
+    }
+        else
+            {
+        return false;
+    }
         }
 
         /// <summary>
@@ -77,7 +100,13 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static int TeaParty(int tea, int candy)
         {
-            throw new NotImplementedException();
+            if(tea < 5 || candy < 5)  // your first case was correct
+     return 0;
+
+  if(candy * 2 <= tea || tea * 2 <= candy)  // must be <= not >=
+     return 2;
+
+  return 1;  
         }
 
         /// <summary>
@@ -88,7 +117,8 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool SquirrelPlay(int temperature, bool isSummer)
         {
-            throw new NotImplementedException();
+            return(isSummer)?(temperature >= 60 && temperature<=100): (temperature >=60 && temperature <= 90);
+
         }
 
         /// <summary>

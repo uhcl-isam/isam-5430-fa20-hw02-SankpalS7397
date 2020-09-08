@@ -23,14 +23,43 @@ namespace CSharp.Assignments.Loop1
     /// </summary>
     public class CheckerboardPattern
     {
-        public static void Main()
+        public static void Main(string[]args)
         {
             Console.Write("Enter the number of rows: ");
             int num = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter the fill character: ");
             char fillChar = Char.Parse(Console.ReadLine());
-
-            // Write your codes here.
+            {
+                string star = "* ";
+                char space = ' ';
+                int index = 1;
+                int counter = 1;
+                while (index <=8)
+                {
+                    if (index % 2 != 0)
+                    {
+                        while( counter <= 8)
+                        {
+                            Console.Write(star);
+                            counter++;
+                        }
+                    }
+                    else
+                    {
+                        Console.Write(space);
+                        while(counter <=8)
+                        {
+                            Console.Write(star);
+                            counter++;
+                        }
+                    }
+                    counter = 1;
+                    index++;
+                    Console.WriteLine();
+                }
+                Console.ReadLine();
+            }
+            
         }
     }
 }
