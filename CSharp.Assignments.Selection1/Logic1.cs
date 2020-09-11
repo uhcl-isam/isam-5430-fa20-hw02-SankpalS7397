@@ -137,9 +137,29 @@ namespace CSharp.Assignments.Loop1
         /// <param name="vacation"></param>
         /// <returns>either: "7:00" or "10:00" or "off"</returns>
         public static string AlarmClock(DayOfWeek dayOfWeek, bool vacation)
-        {
-            throw new NotImplementedException();
-        }
+        if ((vacation))
+            {
+
+                if ((dayOfWeek >= (DayOfWeek)1) && (dayOfWeek <= (DayOfWeek)5))
+                {
+                    return $"10:00";
+                }
+                else
+                {
+                    return "off";
+                }
+            }
+            else
+            {
+                if ((dayOfWeek >= (DayOfWeek)1) && (dayOfWeek <= (DayOfWeek)5))
+                {
+                    return $"7:00";
+                }
+                else
+                {
+                    return "10:00";
+                }
+            }
 
 
         /// <summary>
@@ -151,7 +171,16 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            if (!isMorning && !isAsleep)
+                {
+            return true;
+            }
+            if(isMom && !isAsleep)
+                {
+            return true;
+            }
+            return false;
         }
 
 
@@ -165,7 +194,9 @@ namespace CSharp.Assignments.Loop1
         /// <param name="number">Number.</param>
         public static bool IsHilly(int number)
         {
-            throw new NotImplementedException();
+           throw new NotImplementedException();
+
+
         }
 
         /// <summary>
@@ -177,7 +208,15 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool CloseFar(int a, int b, int c)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            int diff1 = Math.Abs(a-b);
+            int diff2 = Math.Abs(a-c);
+            int diff3 = Math.Abs(b-c);
+            if ((diff1<=1)&& (diff2>=2)&&(diff3>=2))
+                {
+            return true;
+            }
+            return false;
         }
     }
 }
