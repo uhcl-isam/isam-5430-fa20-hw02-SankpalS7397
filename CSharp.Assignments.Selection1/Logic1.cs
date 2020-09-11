@@ -136,30 +136,8 @@ namespace CSharp.Assignments.Loop1
         /// <param name="dayOfWeek"></param>
         /// <param name="vacation"></param>
         /// <returns>either: "7:00" or "10:00" or "off"</returns>
-        public static string AlarmClock(DayOfWeek dayOfWeek, bool vacation)
-        if ((vacation))
-            {
-
-                if ((dayOfWeek >= (DayOfWeek)1) && (dayOfWeek <= (DayOfWeek)5))
-                {
-                    return $"10:00";
-                }
-                else
-                {
-                    return "off";
-                }
-            }
-            else
-            {
-                if ((dayOfWeek >= (DayOfWeek)1) && (dayOfWeek <= (DayOfWeek)5))
-                {
-                    return $"7:00";
-                }
-                else
-                {
-                    return "10:00";
-                }
-            }
+        ///  public static string AlarmClock(DayOfWeek dayOfWeek, bool vacation)
+     
 
 
         /// <summary>
@@ -171,16 +149,29 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
         {
-            //throw new NotImplementedException();
-            if (!isMorning && !isAsleep)
-                {
-            return true;
+            if (isAsleep)
+            {
+                return false;
             }
-            if(isMom && !isAsleep)
+            else
+            {
+                if (isMorning)
                 {
-            return true;
+                    if (isMom)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return true;
+                }
             }
-            return false;
+          
         }
 
 
@@ -208,15 +199,19 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool CloseFar(int a, int b, int c)
         {
-            //throw new NotImplementedException();
-            int diff1 = Math.Abs(a-b);
-            int diff2 = Math.Abs(a-c);
-            int diff3 = Math.Abs(b-c);
-            if ((diff1<=1)&& (diff2>=2)&&(diff3>=2))
-                {
-            return true;
+            //Assert.AreEqual(false, Logic1.CloseFar(10, 8, 9));
+            a = Math.Abs(a);
+            b = Math.Abs(b);
+            c = Math.Abs(c);
+            if ((Math.Abs(a - b) <= 1 && Math.Abs(a - c) <= 1) || (Math.Abs(a - b) <= 1 && Math.Abs(b - c) <= 1) || (Math.Abs(a - c) <= 1 && Math.Abs(b - c) <= 1))
+            {
+                return false;
             }
-            return false;
+            else
+            {
+                return true;
+            }
+            throw new NotImplementedException();
         }
     }
 }

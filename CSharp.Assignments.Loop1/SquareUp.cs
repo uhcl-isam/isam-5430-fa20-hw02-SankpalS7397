@@ -14,6 +14,40 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // Write your codes here
+            int number = 0;
+            Console.Write("Enter number: ");
+            number = Convert.ToInt32(Console.ReadLine());
+
+
+            int SaveNum = number;
+            int OuterLoop = 1;
+
+            while (OuterLoop <= number)
+            {
+                int InnerLoop = 1;
+                int CopyOuterLoop = OuterLoop;
+
+                while (InnerLoop <= number)
+                {
+
+                    if (InnerLoop >= SaveNum)
+                    {
+                        Console.Write($"{CopyOuterLoop}, ");
+                        CopyOuterLoop--;
+                    }
+                    else
+                    {
+                        Console.Write($"0, ");
+                    }
+                    InnerLoop++;
+
+                }
+                Console.WriteLine();
+                OuterLoop++;
+                SaveNum--;
+            }
         }
     }
 }
+    
+

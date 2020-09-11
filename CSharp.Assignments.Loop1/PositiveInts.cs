@@ -13,6 +13,18 @@ namespace CSharp.Assignments.Loop1
         {
             Console.Error.WriteLine("Enter the value of n");
             // write your codes here.
+            int n = 0;
+            n = Convert.ToInt32(Console.ReadLine());
+            int currentNum = 1;
+            while (currentNum <= n)
+            {
+                Console.WriteLine(currentNum);
+                currentNum++;
+            }
         }
     }
 }
+
+        
+    
+
