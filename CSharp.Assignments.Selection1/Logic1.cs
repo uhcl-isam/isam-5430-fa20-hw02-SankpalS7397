@@ -136,7 +136,10 @@ namespace CSharp.Assignments.Loop1
         /// <param name="dayOfWeek"></param>
         /// <param name="vacation"></param>
         /// <returns>either: "7:00" or "10:00" or "off"</returns>
-        ///  public static string AlarmClock(DayOfWeek dayOfWeek, bool vacation)
+          public static string AlarmClock(DayOfWeek dayOfWeek, bool vacation)
+        {
+            throw new NotImplementedException();
+        }
      
 
 
