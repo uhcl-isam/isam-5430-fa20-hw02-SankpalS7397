@@ -22,31 +22,42 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            int totalMiles = 0;
-            int totalGallons = 0;
-            int miles = 0;
-            // prompt user for non-negative miles and obtain the input from user
-            //Console.Write("How many miles you have driven till now: ");
-            miles = Convert.ToInt32(Console.ReadLine());
-            while (miles >= 0)
             {
-                Console.Write("Enter amount of gallons used to drive miles, you have mentioned above: ");
-                int Gallons = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+                // prompt user for non-negative miles and obtain the input from user
                 // codes go here.
-                decimal Average = (decimal)miles / (decimal)Gallons;
-                Console.WriteLine($"MPG this tankful: {Math.Round(Average, 2)}");
+                float totalMiles = 0;
+                float totalGallons = 0;
+                while (true)
+                {
+                    Console.WriteLine("Enter the miles driven: ");
+                    int miles = int.Parse(Console.ReadLine());
+                    if (miles < 0)
+                    {
+                        break;
+                    }
+                    totalMiles = totalMiles + miles;
+                    Console.WriteLine("Enter the gallons used: ");
+                    int gallons = int.Parse(Console.ReadLine());
 
-                totalMiles += miles;
-                totalGallons += Gallons;
-                decimal totalAverage = (decimal)totalMiles / (decimal)totalGallons;
-                Console.WriteLine($"Total MPG: {Math.Round(totalAverage, 2)}");
-                Console.WriteLine();
+                    totalGallons = totalGallons + gallons;
+                    float mpg = (float)miles / gallons;
+                    float totalMPG = totalMiles / totalGallons;
+                    if (mpg < 0)
+                    {
+                        return;
+                    }
 
-                Console.Write("How many miles you have driven till now: ");
-                miles = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine();
+
+                    Console.WriteLine("MPG this tankful: {0:F2}", mpg);
+                    Console.WriteLine("Total MPG: {0:F2}", totalMPG);
+                }
+                Console.ReadLine();
             }
         }
+
     }
 }
+
+
+               
 

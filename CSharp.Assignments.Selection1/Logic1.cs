@@ -35,35 +35,46 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static int CaughtSpeeding(int speed, bool birthday)
         {
-          if(speed <=60 )
-                {
-                Console.WriteLine("No ticeket");
+            if (speed <= 60)
+            {
                 return 0;
             }
-          else if (speed <= 80)
+            else if (speed >= 60 && speed <= 80)
+            {
+                if (speed >= 60 && speed <= 80 && (birthday))
                 {
-                Console.WriteLine("Small Ticket");
-                return 1;
-                    }
-          else 
+                    return 0;
+                }
+                else
                 {
-           Console.WriteLine("Big Ticket");
+                    return 1;
+                }
+            }
+            else if (speed >= 81)
+            {
+                if (speed >= 81 && birthday)
+                {
+                    return 1;
+                }
                 return 2;
             }
+            throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// The number 6 is a truly great number.Given two int values, a and b, return true if either one is 6. Or if their sum or difference is 6.
-        /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <returns></returns>
-        public static bool Love6(int a, int b)
+            /// <summary>
+            /// The number 6 is a truly great number.Given two int values, a and b, return true if either one is 6. Or if their sum or difference is 6.
+            /// </summary>
+            /// <param name="a"></param>
+            /// <param name="b"></param>
+            /// <returns></returns>
+            public static bool Love6(int a, int b)
         {
            if (a==6  || b==6 || a+b ==6 || a-b==6)
-                {return true;
+                {
+                return true;
                 }
-           else{
+            else
+            {
             return false;
                 }
                 }
